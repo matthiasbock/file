@@ -689,14 +689,4 @@
 >>>>0x78 ubyte		0x10	YM2149,
 >>>>0x78 ubyte		0x11	YM3439,
 
-# GVOX Encore file format
-# Since this is a proprietary file format and there is no publicly available
-# format specification, this is just based on induction
-#
-0	string	SCOW
->4	byte	0xc4	GVOX Encore music, version 5.0 or above
->4	byte	0xc2	GVOX Encore music, version < 5.0
-
-0	string	ZBOT
->4	byte	0xc5	GVOX Encore music, version < 5.0
 

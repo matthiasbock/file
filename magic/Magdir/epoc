@@ -30,8 +30,8 @@
 >4	lelong		0x10000074	OPL application
 !:mime application/x-epoc-app
 >4	lelong		0x1000008A	exported multi-bitmap image
->4	lelong		0x1000016D
->>8	lelong		0x10000087	Comms names
+>4	lelong		0x1000016D	
+>>8	lelong		0x10000088	Comms names
 
 0	lelong		0x10000041	Psion Series 5 ROM multi-bitmap image
 

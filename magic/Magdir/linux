@@ -48,10 +48,7 @@
 2	string		LILO		Linux/i386 LILO boot/chain loader
 #
 # Linux make config build file, from Ole Aamot <oka@oka.no>
-# Updated by Ken Sharp
-28	string		make\ config		Linux make config build file (old)
-49	search/70	Kernel\ Configuration	Linux make config build file
-
+28 	string		make\ config	Linux make config build file
 #
 # PSF fonts, from H. Peter Anvin <hpa@yggdrasil.com>
 # Updated by Adam Buchbinder <adam.buchbinder@gmail.com>

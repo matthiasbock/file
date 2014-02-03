@@ -80,7 +80,6 @@ private const struct {
 	{ "LZIP",     4, { "lzip", "-cdq", NULL }, 1 },
  	{ "\3757zXZ\0",6,{ "xz", "-cd", NULL }, 1 },		/* XZ Utils */
  	{ "LRZI",     4, { "lrzip", "-dqo-", NULL }, 1 },	/* LRZIP */
- 	{ "\004\"M\030", 4, { "lz4", "-cd", NULL }, 1 },	/* LZ4 */
 };
 
 #define NODATA ((size_t)~0)

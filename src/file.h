@@ -27,7 +27,7 @@
  */
 /*
  * file.h - definitions for file(1) program
- * @(#)$File: file.h,v 1.146 2013/12/05 17:02:34 christos Exp $
+ * @(#)$File: file.h,v 1.145 2013/04/22 15:30:11 christos Exp $
  */
 
 #ifndef __file_h__
@@ -415,8 +415,7 @@ protected int file_buffer(struct magic_set *, int, const char *, const void *,
     size_t);
 protected int file_fsmagic(struct magic_set *, const char *, struct stat *);
 protected int file_pipe2file(struct magic_set *, int, const void *, size_t);
-protected int file_vprintf(struct magic_set *, const char *, va_list)
-    __attribute__((__format__(__printf__, 2, 0)));
+protected int file_vprintf(struct magic_set *, const char *, va_list);
 protected size_t file_printedlen(const struct magic_set *);
 protected int file_replace(struct magic_set *, const char *, const char *);
 protected int file_printf(struct magic_set *, const char *, ...)
@@ -492,21 +491,18 @@ ssize_t pread(int, void *, size_t, off_t);
 int vasprintf(char **, const char *, va_list);
 #endif
 #ifndef HAVE_ASPRINTF
-int asprintf(char **, const char *, ...);
+int asprintf(char **ptr, const char *format_string, ...);
 #endif
 
 #ifndef HAVE_STRLCPY
-size_t strlcpy(char *, const char *, size_t);
+size_t strlcpy(char *dst, const char *src, size_t siz);
 #endif
 #ifndef HAVE_STRLCAT
-size_t strlcat(char *, const char *, size_t);
-#endif
-#ifndef HAVE_STRCASESTR
-char *strcasestr(const char *, const char *);
+size_t strlcat(char *dst, const char *src, size_t siz);
 #endif
 #ifndef HAVE_GETLINE
-ssize_t getline(char **, size_t *, FILE *);
-ssize_t getdelim(char **, size_t *, int, FILE *);
+ssize_t getline(char **dst, size_t *len, FILE *fp);
+ssize_t getdelim(char **dst, size_t *len, int delimiter, FILE *fp);
 #endif
 #ifndef HAVE_CTIME_R
 char   *ctime_r(const time_t *, char *);

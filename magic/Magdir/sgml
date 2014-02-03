@@ -15,13 +15,6 @@
 >>19	search/4096	\<urlset		XML Sitemap document text
 !:mime	application/xml-sitemap
 
-# OpenStreetMap XML (.osm)
-# http://wiki.openstreetmap.org/wiki/OSM_XML
-# From: Markus Heidelberg <markus.heidelberg@web.de>
-0	string		\<?xml\ version="
->15	string		>\0
->>19	search/4096	\<osm			OpenStreetMap XML data
-
 # xhtml
 0	string/t		\<?xml\ version="
 >15	string		>\0
